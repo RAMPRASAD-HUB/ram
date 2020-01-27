@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Employee xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <header>
+    <CompanyName xsi:type="xs:string">Company1</CompanyName>
+    <EmpCount xsi:type="xs:string">42</EmpCount>
+    <Address xsi:type="xs:string">123 Street</Address>
+    <City xsi:type="xs:string">Winchester</City>
+    <Country xsi:type="xs:string">UK</Country>
+  </header>
+  <record>
+    <EmpNo xsi:type="xs:string">000010</EmpNo>
+    <Firstname xsi:type="xs:string">CHRISTINE</Firstname>
+    <MidInit xsi:type="xs:string">I</MidInit>
+    <LastName xsi:type="xs:string">HAAS</LastName>
+    <WokrDept xsi:type="xs:string">A00</WokrDept>
+    <PhoneNo xsi:type="xs:string">3978</PhoneNo>
+  </record>
+</Employee>

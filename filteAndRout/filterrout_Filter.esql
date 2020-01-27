@@ -1,0 +1,27 @@
+
+
+CREATE FILTER MODULE filterrout_Filter
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY( Root.XMLNSC.People.Person[]);
+		WHILE I <= J DO
+		 
+		  	CASE  Root.XMLNSC.Person.FirstName
+		    	WHEN 'BalaKrishna'  THEN
+		    		return true;
+		  		WHEN 'Chiranjeevi'  THEN
+		  			return false;
+		  		WHEN 'Nagarjuna'  THEN
+		  			return true;
+		  		WHEN 'Venkatesh'  THEN
+		  			return unknown;
+		  		
+		  	END CASE;
+			SET I = I + 1;
+			
+		end while;
+	END;
+
+END MODULE;

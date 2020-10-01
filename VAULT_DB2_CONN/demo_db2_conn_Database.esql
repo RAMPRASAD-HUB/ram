@@ -1,0 +1,25 @@
+
+
+CREATE DATABASE MODULE demo_db2_conn_Database
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		DECLARE ref REFERENCE TO InputRoot.XMLNSC.Employee.Data;
+
+		WHILE LASTMOVE (ref) DO
+		
+		 INSERT INTO Database.DSN.ADMINISTRATOR.EMPLOYEE (id,name,location) VALUES (ref.ID,ref.NAME,ref.ADDRESS);
+		 
+		 IF SQLCODE = 0 THEN
+				SET OutputRoot.JSON.Data.Message = 'Data Insert';
+			ELSE
+				SET OutputRoot.JSON.Data.Message = 'Data Not Inserted';
+
+			END IF;
+
+			MOVE ref NEXTSIBLING;
+		END WHILE;
+		RETURN TRUE;
+	END;
+
+END MODULE;
